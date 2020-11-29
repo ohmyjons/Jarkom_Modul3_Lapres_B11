@@ -85,7 +85,8 @@ d. Setting semua interfaces di masing masing UML client di `nano /etc/network/in
 
 > auto eth0
 > iface eth0 inet dhcp
-> ![](myMediaFolder\media\image22.png)
+
+![](myMediaFolder\media\image22.png)
 
 e. Lakukan network restart di semua UML Client
 
@@ -94,12 +95,12 @@ e. Lakukan network restart di semua UML Client
 7. Membuat Proxy sebagai penghubung jaringan lokal ke internet dengan syarat proxy hanya bisa dilakukan oleh Anri sebagai user TA. User autentikasi milik Anri memiliki format:
    ● User : userta_yyy
    ● Password : inipassw0rdta_yyy
-   > Keterangan : yyy adalah nama kelompok masing-masing. Contoh:
-   > userta_c01
-   > Jawab :
-   > a. Install squid pada UML Mojokerto `apt-get install squid`
-   > b. Buat user dan password baru
-   > ![](myMediaFolder\media\image4.png)
+   Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
+
+Jawab :
+a. Install squid pada UML Mojokerto `apt-get install squid`
+b. Buat user dan password baru
+![](myMediaFolder\media\image4.png)
 
 c. Backup config
 
