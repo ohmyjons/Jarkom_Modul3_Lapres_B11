@@ -27,13 +27,13 @@ a. Install isc-dhcp-relay di Surabaya `apt-get install isc-dhcp-relay`
 
 ![1.1](myMediaFolder/media/image6.png)
 
-![](myMediaFolder\media\image12.png)
+![](myMediaFolder/media/image12.png)
 
 b. Masukkan IP Tuban dan masukan interface dengan eth1 eth2 seperti gambar di atas
 
 c. Buka `/etc/default/isc-dhcp-relay` di surabaya dan edit seperti gambar dibawah ini
 
-![](myMediaFolder\media\image11.png)
+![](myMediaFolder/media/image11.png)
 
 d. Kemudian lakukan `service isc-dhcp-relay restart`
 
@@ -79,18 +79,18 @@ c. Buka `nano /etc/dhcp/dhcpd.conf` lalu ketikkan config seperti dibawah.
 
 Restart service isc-dhcp-server dengan perintah `service isc-dhcp-server restart`
 
-![](myMediaFolder\media\image15.png)
+![](myMediaFolder/media/image15.png)
 
 d. Setting semua interfaces di masing masing UML client di `nano /etc/network/interface` seperti berikut
 
 > auto eth0
 > iface eth0 inet dhcp
 
-![](myMediaFolder\media\image22.png)
+![](myMediaFolder/media/image22.png)
 
 e. Lakukan network restart di semua UML Client
 
-![](myMediaFolder\media\image10.png)
+![](myMediaFolder/media/image10.png)
 
 7. Membuat Proxy sebagai penghubung jaringan lokal ke internet dengan syarat proxy hanya bisa dilakukan oleh Anri sebagai user TA. User autentikasi milik Anri memiliki format:
    ● User : userta_yyy
@@ -100,29 +100,29 @@ e. Lakukan network restart di semua UML Client
 Jawab :
 a. Install squid pada UML Mojokerto `apt-get install squid`
 b. Buat user dan password baru
-![](myMediaFolder\media\image4.png)
+![](myMediaFolder/media/image4.png)
 
 c. Backup config
 
-![](myMediaFolder\media\image18.png)
+![](myMediaFolder/media/image18.png)
 
 d. Edit config sebagai berikut
 
-![](myMediaFolder\media\image3.png)
+![](myMediaFolder/media/image3.png)
 
 e. Lalu restart
 
 f. Atur pengaturan proxy di laptop sebagai berikut
 
-![](myMediaFolder\media\image13.png)
+![](myMediaFolder/media/image13.png)
 
 g. Masuk ke browser dan coba akses suatu web, maka akan muncul tampilan > seperti berikut
 
-![](myMediaFolder\media\image2.png)
+![](myMediaFolder/media/image2.png)
 
 h. Masukkan user dan password seperti yang sudah di atur , dan berikut > tampilan setelah berhasil login
 
-![](myMediaFolder\media\image7.png)
+![](myMediaFolder/media/image7.png)
 
 8. Setiap hari selasa - rabu pukul 13.00-18.00 . Bu Meguri membatasi
    penggunaan internet Anri hanya pada jadwal yang telah ditentukan saja.
@@ -136,15 +136,15 @@ Jawaban no 8 & 9
 
 a. Buka `nano /etc/squid/squid.conf` lalu ubah seperti berikut:
 
-![](myMediaFolder\media\image16.png)
+![](myMediaFolder/media/image16.png)
 
 b. Buka dan edit seperti konfigurasi di bawah ini
 
-![](myMediaFolder\media\image5.png)
+![](myMediaFolder/media/image5.png)
 
 c. Berikut hasil setelah melakukan konfigurasi pengaturan waktu akses
 
-![](myMediaFolder\media\image17.png)
+![](myMediaFolder/media/image17.png)
 
 10. Setiap mengakses google.com makan di redirect menuju
     monta.if.its.ac.d
@@ -159,23 +159,23 @@ b. Tambahkan potongan syntax berikut :
 > deny_info http://monta.if.its.ac.id all
 > http_access deny site all
 
-![](myMediaFolder\media\image16.png)
+![](myMediaFolder/media/image16.png)
 c. Berikut bukti berhasil melakukan redirect ke monta.if.its.ac.id saat mengakses google.com
 
-![](myMediaFolder\media\image20.png)
-![](myMediaFolder\media\image8.png)
+![](myMediaFolder/media/image20.png)
+![](myMediaFolder/media/image8.png)
 
 11. Bu Meguri meminta Anri untuk mengubah error default squid menjadi
     error page yang dapat diunduh di wget 10.151.36.202/error403.tar.gz
 
-![](myMediaFolder\media\image14.png)
+![](myMediaFolder/media/image14.png)
 
 a. Masuk ke folder /usr/share/squid/errors/en
 b. Lalu rm ERR_ACCESS_DENIED
 c. Kemudian lakukan wget 10.151.36.202/ERR_ACCESS_DENIED
 d. Berikut hasil nya :
 
-![](myMediaFolder\media\image21.png)
+![](myMediaFolder/media/image21.png)
 
 12. Karena Bu Meguri dan Anri adalah tipe orang yang pelupa , maka untuk memudahkan mereka, Anri memiliki ide ketika menggunakan proxy cukup dengan mengetikkan domain janganlupa-ta.yyy.pw dan memasukkan port 8080.
 
@@ -190,7 +190,7 @@ c. Isikan konfigurasi domain janganlupa-ta.b11.pw sesuai dengan syntax berikut
 > file \"/etc/bind/jarkom/janganlupa-ta.b11.pw\";
 > };
 
-![](myMediaFolder\media\image1.png)
+![](myMediaFolder/media/image1.png)
 
 d. Buat folder jarkom `mkdir /etc/bind/jarkom`
 
@@ -200,7 +200,7 @@ e. Copykan file db.local pada path /etc/bind ke dalam folder janganlupa-ta.b11.p
 
 f. Buka nano /etc/bind/jarkom/janganlupa-ta.b11.pw dan ubah syntaxnya seperti gambar dibawah ini
 
-![](myMediaFolder\media\image19.png)
+![](myMediaFolder/media/image19.png)
 g. Setelah itu lakukan restart bind9 dengan perintah `service bind9 restart`
 h. Untuk mengecek apakah domain sudah bisa dijalankan, maka lakukan pengaturan proxy di laptop seperti gambar dibawah ini
-![](myMediaFolder\media\image9.png)
+![](myMediaFolder/media/image9.png)
