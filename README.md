@@ -25,7 +25,7 @@ Anggota :
 
 a. Install isc-dhcp-relay di Surabaya `apt-get install isc-dhcp-relay`
 
-![1.1](myMediaFolder\media\image6.png)
+![1.1](myMediaFolder/media/image6.png)
 
 ![](myMediaFolder\media\image12.png)
 
