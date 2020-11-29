@@ -200,9 +200,6 @@ e. Copykan file db.local pada path /etc/bind ke dalam folder janganlupa-ta.b11.p
 f. Buka nano /etc/bind/jarkom/janganlupa-ta.b11.pw dan ubah syntaxnya seperti gambar dibawah ini
 
 ![](myMediaFolder\media\image19.png)
-
 g. Setelah itu lakukan restart bind9 dengan perintah `service bind9 restart`
-
 h. Untuk mengecek apakah domain sudah bisa dijalankan, maka lakukan pengaturan proxy di laptop seperti gambar dibawah ini
-
 ![](myMediaFolder\media\image9.png)
